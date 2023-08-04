@@ -310,6 +310,13 @@ a.active {
     height: 100vh;
 }
 
+
+#dogshome {
+    background: url(../img/dogs/sami_jump_8monthsold.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
 .table-cell {
     display: table-cell;
     vertical-align: middle;
