@@ -16,3 +16,12 @@
 }
 
 
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: stretch;
+  justify-content: center;
+}

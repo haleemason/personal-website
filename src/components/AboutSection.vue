@@ -15,13 +15,13 @@
           classification, algorithm development, and deployment of analytical models while utilizing technologies
           such as Python, Spark, and R.
         </p>
-        <!-- <div class="h-50"></div> <img src="img/Signature.svg" width="300" alt="" /> -->
+        <!-- <div class="h-50"></div> <img src="img/signature.svg" width="300" alt="" /> -->
         <div class="h-50"></div>
       </div>
       <div class="col-md-6 about-img-div">
         <!-- <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div> -->
-        <img src="../assets/img/about-img.jpg" width="400" class="img-responsive" alt="" data-aos="fade-right"
-          data-aos-delay="0" id="profile-img" />
+        <img src="../assets/img/about-img.jpg" width="400"  alt="" data-aos="fade-right"
+          data-aos-delay="0" />
       </div>
     </div>
   </div>

@@ -15,13 +15,15 @@
 
         <p>When I was 17 years old I was ranked the #1 ranking Junior Handler in the U.S. in 2007. During this time, I was attending competitive dog and confirmation shows as often as possible. In 2008 I achieved a MACH ranking with Cammi. She stands with 20 double Q's and over 900 points. We are planning to go to Nationals this March.
         </p>
-        <!-- <div class="h-50"></div> <img src="img/Signature.svg" width="300" alt="" /> -->
+        <!-- <div class="h-50"></div> <img src="img/signature.svg" width="300" alt="" /> -->
         <div class="h-50"></div>
       </div>
-      <div class="col-md-6 about-img-div">
-        <!-- <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div> -->
-        <img src="../assets/img/dogs/best_junior_handler.jpg" width="800" class="img-responsive" alt="" data-aos="fade-right"
-          data-aos-delay="0" id="profile-img" />
+      <div class="col-md-6">
+        <div class="about-img-div">
+          <!-- <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div> -->
+          <img src="../assets/img/dogs/best_junior_handler.jpg" width="800" class="img-responsive" alt="" data-aos="fade-right"
+            data-aos-delay="0" id="profile-img" />
+         </div>
       </div>
     </div>
   </div>
