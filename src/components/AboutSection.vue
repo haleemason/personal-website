@@ -20,7 +20,7 @@
       </div>
       <div class="col-md-6 about-img-div">
         <!-- <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div> -->
-        <img src="../assets/img/about-img.jpg" width="400"  alt="" data-aos="fade-right"
+        <img src="../assets/img/about_halee.jpg" width="400"  alt="" data-aos="fade-right"
           data-aos-delay="0" />
       </div>
     </div>

@@ -305,14 +305,14 @@ a.active {
 ==================================================*/
 
 #home {
-    background: url(../img/home-bg-2.jpg);
+    background: url(../img/home_background.jpg);
     background-size: cover;
     height: 100vh;
 }
 
 
 #dogshome {
-    background: url(../img/dogs/sami_jump_8monthsold.jpg);
+    background: url(../img/dogs/sami_jump_8months_old.jpg);
     background-size: cover;
     height: 100vh;
 }

@@ -1,4 +1,6 @@
 <script setup>
+// import HighlightCard from './HighlightCard.vue';
+import samira from '../assets/img/dogs/sami_jump_8months_old.jpg';
 </script>
 <template>
   <div class="section" id="experience">
@@ -18,18 +20,57 @@
               <h4><a href="https://www.timelessaussies.com/">Timeless Desert Rose TKA</a></h4>
               <h5>Miniature American Shepherd</h5>
               <ul>
-                <li>S.T.A.R. Puppy Award
-                </li>
-                <li>AKC Novice Trick Dog Title
-                </li>
-                <li>AKC Intermediate Trick Dog Title
-                </li>
-                <li>AKC Advanced Trick Dog Title
-                </li>
-                <li>Currently training for CGC and Agility!
-                </li>
-                <li>Sire: Brody </li>
-                <li>Dam: Trouble </li>
+                  <HighlightCard :src="samira" type="competitions" :typeFilter="selectedFilter">
+                  <!-- Card -->
+                  <template v-slot:title>
+                    Samira <br> Timeless Desert Rose
+                  </template>
+                  <template v-slot:lead>
+                    Mini Aussie
+                  </template>
+                  <!-- Model -->
+                  <template v-slot:modelTitle>
+                    Samira <br> Timeless Desert Rose
+                  </template>
+                  <template v-slot:modelDate>
+                    <p><b>Completed:</b> April 2018<br> </p>
+                  </template>
+                  <template v-slot:modelContent>
+                    <p>Developed multiple timeseries models (ARIMA, Regression) in Python with a team of four Data
+                      Scientists. Deployed the models using Docker to forecast Wi-Fi usage in daily and hourly increments.
+                    </p>
+
+                    <li>S.T.A.R. Puppy Award
+                    </li>
+                    <li>AKC Novice Trick Dog Title
+                    </li>
+                    <li>AKC Intermediate Trick Dog Title
+                    </li>
+                    <li>AKC Advanced Trick Dog Title
+                    </li>
+                    <li>Currently training for CGC and Agility!
+                    </li>
+                    <li>Sire: Brody </li>
+                    <li>Dam: Trouble </li>
+                    <p>Samira is from <a href="https://haleemason.github.io/hackd-web/#"><b>Timeless Mini Aussies</b></a>.</p>
+                    <br />
+                    <br />
+                    <img src="../assets/img/portfolio/01a.jpg" class="img-responsive">
+                    <br />
+                    <br />
+                    <ul>
+                      The Best Data Storytelling submission was evaluated for the following criteria:
+                      <li><b>Soundness</b> - How robust and rigorous is the analysis behind the storytelling?</li>
+                      <li><b>Explainable</b> - How well does the story explain what is going on in the data?</li>
+                      <li><b>Appeal</b> - How stunning are the visuals?</li>
+                      <li><b>Accessibility</b> - How accessible are the findings to a diverse audience?</li>
+                      <li><b>Engagement</b> - How engaging is the combined narrative and visuals?</li>
+                    </ul>
+
+                  
+                  </template>
+                </HighlightCard>
+
               </ul>
             </div>
           </li>
