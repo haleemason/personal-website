@@ -1,6 +1,34 @@
 <script setup>
-// import HighlightCard from './HighlightCard.vue';
-import samira from '../assets/img/dogs/sami_jump_8months_old.jpg';
+import HighlightCard from './HighlightCard.vue';
+import samiraPic from '../assets/img/dogs/sami_jump_8months_old.jpg';
+import { ref } from 'vue'
+const filters = [
+  {
+    name: "All",
+    type: '*'
+  },
+  {
+    name: "Projects",
+    type: 'project'
+  },
+  {
+    name: "Competitions",
+    type: 'competitions'
+  },
+  {
+    name: "Capstone",
+    type: 'capstone'
+  },
+  {
+    name: "Spotlight",
+    type: 'spotlight'
+  }
+]
+
+const selectedFilter = ref(filters[0])
+function setFilter(filter) {
+  selectedFilter.value = filter
+}
 </script>
 <template>
   <div class="section" id="experience">
@@ -18,22 +46,22 @@ import samira from '../assets/img/dogs/sami_jump_8months_old.jpg';
               <p class="timeline-event-thumbnail">September 18th, 2023 - Present</p>
               <h3>Samira</h3>
               <h4><a href="https://www.timelessaussies.com/">Timeless Desert Rose TKA</a></h4>
-              <h5>Miniature American Shepherd</h5>
               <ul>
-                  <HighlightCard :src="samira" type="competitions" :typeFilter="selectedFilter">
+                
+            <div class="no-padding portfolio_container clearfix">
+                  <HighlightCard class="right-half-card" :src="samiraPic" type="competitions" :typeFilter="selectedFilter">
                   <!-- Card -->
                   <template v-slot:title>
-                    Samira <br> Timeless Desert Rose
+                    Samira <br>"Timeless Desert Rose"
                   </template>
-                  <template v-slot:lead>
-                    Mini Aussie
+                  <template v-slot:lead>Miniature American Shepherd
                   </template>
                   <!-- Model -->
                   <template v-slot:modelTitle>
-                    Samira <br> Timeless Desert Rose
+                    Samira <br>"Timeless Desert Rose"
                   </template>
                   <template v-slot:modelDate>
-                    <p><b>Completed:</b> April 2018<br> </p>
+                    <p><b>Born:</b> September 18th, 2023<br> </p>
                   </template>
                   <template v-slot:modelContent>
                     <p>Developed multiple timeseries models (ARIMA, Regression) in Python with a team of four Data
@@ -55,22 +83,11 @@ import samira from '../assets/img/dogs/sami_jump_8months_old.jpg';
                     <p>Samira is from <a href="https://haleemason.github.io/hackd-web/#"><b>Timeless Mini Aussies</b></a>.</p>
                     <br />
                     <br />
-                    <img src="../assets/img/portfolio/01a.jpg" class="img-responsive">
+                    <!-- <img src="../assets/img/portfolio/01a.jpg" class="img-responsive"> -->
                     <br />
-                    <br />
-                    <ul>
-                      The Best Data Storytelling submission was evaluated for the following criteria:
-                      <li><b>Soundness</b> - How robust and rigorous is the analysis behind the storytelling?</li>
-                      <li><b>Explainable</b> - How well does the story explain what is going on in the data?</li>
-                      <li><b>Appeal</b> - How stunning are the visuals?</li>
-                      <li><b>Accessibility</b> - How accessible are the findings to a diverse audience?</li>
-                      <li><b>Engagement</b> - How engaging is the combined narrative and visuals?</li>
-                    </ul>
-
-                  
                   </template>
-                </HighlightCard>
-
+                  </HighlightCard>
+              </div>
               </ul>
             </div>
           </li>
@@ -141,3 +158,10 @@ import samira from '../assets/img/dogs/sami_jump_8months_old.jpg';
     </div>
   </div>
 </template>
+<style>
+.right-half-card {
+  float: right;
+  width: 50%; /* Half of the screen width */
+  margin-left: 10px; /* Adjust this value for spacing */
+}
+</style>
