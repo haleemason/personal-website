@@ -4,8 +4,7 @@ import LoadingElement from "../components/LoadingElement.vue";
 import NavBar from "../components/NavBar.vue";
 import DogsHomeSection from "../components/DogsHomeSection.vue";
 import DogsAboutSection from "../components/DogsAboutSection.vue";
-import DogsMeetTheGirlsSection from "../components/DogsMeetTheGirlsSection.vue";
-import HighlightsSection from "../components/HighlightsSection.vue";
+import DogsHighlightsSection from "../components/DogsHighlightsSection.vue";
 
 const isLoading = ref(true)
 onMounted(() => {
@@ -20,6 +19,5 @@ onMounted(() => {
   <NavBar />
   <DogsHomeSection />
   <DogsAboutSection />
-  <DogsMeetTheGirlsSection />
-  <HighlightsSection />
+  <DogsHighlightsSection />
 </template>

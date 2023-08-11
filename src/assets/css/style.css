@@ -304,13 +304,14 @@ a.active {
 /* home section
 ==================================================*/
 
+/* TODO: Move this to HomeSection */
 #home {
     background: url(../img/home_background.jpg);
     background-size: cover;
     height: 100vh;
 }
 
-
+/* TODO: Move this to DogsHomeSection */
 #dogshome {
     background: url(../img/dogs/sami_jump_8months_old.jpg);
     background-size: cover;
