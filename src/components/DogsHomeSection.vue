@@ -8,7 +8,7 @@
         <div class="table-cell" data-aos="fade-up">
           <div class="blurred-background">
             <h4 class="text-white">Halee Mason</h4>
-            <h1>Agility, Conformation, & Obedience Competitor</h1>
+            <h1>Agility, Conformation, & Obedience</h1>
             <h2>Excellence is a mastery of the fundamentals.</h2>
           </div>
         </div>
