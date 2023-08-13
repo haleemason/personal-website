@@ -35,9 +35,9 @@ const isDogsPage = computed(()=> {
       <li><a href="/#highlights">Highlights</a></li>
       <li><a href="/#contact">Contact</a></li>
       <li>
-       <!-- <a href="/dogs">
+       <a href="/dogs">
         <font-awesome-icon class="navbar-icon" :icon="['fas', 'paw']" />
-      </a> -->
+      </a>
       </li>
      </ul>
     </div>

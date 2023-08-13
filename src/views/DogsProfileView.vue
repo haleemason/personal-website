@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import DogProfile from '../components/DogProfile.vue'
+import { VueInstagramEmbed } from 'vue-instagram-embed'
 const isLoading = ref(true)
 onMounted(() => {
  setTimeout(() => {
@@ -9,18 +10,17 @@ onMounted(() => {
 })
 </script>
 
-<!-- <script>
-import { VueInstagramEmbed } from 'vue-instagram-embed'
-// TODO: two export defaults?
-export default {
- components: {
-  VueInstagramEmbed
- }
- // Rest of your component code
-}
-</script> -->
+
+
 
 <template>
+     <span>
+    <!-- Use the Vue Instagram Embed component -->
+    <vue-instagram-embed
+     class="instagram-media"
+     link="https://www.instagram.com/p/CtnE-RAOAVe/?img_index=5"
+    />
+   </span>
  <DogProfile v-if="$route.params.dogName === 'samira'">
   <template v-slot:modelTitle>Samira <br />Timeless Desert Rose TKA </template>
   <template v-slot:modelDate>
@@ -29,13 +29,6 @@ export default {
   <template v-slot:modelContent>
    <p>Samira, or "Sami" for short, is just getting started!</p>
    <li><b>April 2nd, 2023:</b> S.T.A.R. Puppy Award</li>
-   <span>
-    <!-- Use the Vue Instagram Embed component -->
-    <vue-instagram-embed
-     class="instagram-media"
-     link="https://www.instagram.com/p/CtnE-RAOAVe/?img_index=5"
-    />
-   </span>
    <li><b>June 11th, 2023:</b> AKC Novice Trick Dog Title</li>
    <li><b>June 11th, 2023:</b> AKC Intermediate Trick Dog Title</li>
    <li><b>June 11th, 2023:</b> AKC Advanced Trick Dog Title</li>
