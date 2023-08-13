@@ -5,7 +5,7 @@ import LoadingElement from "../components/LoadingElement.vue";
 import NavBar from "../components/NavBar.vue";
 import HomeSection from "../components/HomeSection.vue";
 import AboutSection from "../components/AboutSection.vue";
-import ExperienceSection from "../components/experienceSection.vue";
+import ExperienceSection from "../components/ExperienceSection.vue";
 import EducationSection from "../components/EducationSection.vue";
 import HighlightsSection from "../components/HighlightsSection.vue";
 import ContactSection from "../components/ContactSection.vue";
