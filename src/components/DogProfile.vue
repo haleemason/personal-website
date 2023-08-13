@@ -28,12 +28,12 @@ const showCard = computed(() => {
 
 <template>
   <div >
-    <div class='backbtn' @click="back">
-      <!-- <img class="close close-icon" src="../assets/img/close.svg" /> -->
-      Back
-    </div>
     <div class="clearfix"></div>
     <div class="container">
+      <div class='backbtn' @click="back">
+      <font-awesome-icon class="navbar-icon" :icon="['fas', 'chevron-left']" />
+                Go Back
+    </div>
       <div class="col-md-8 col-md-offset-2">
         <h2>
           <slot name="modelTitle"></slot>
@@ -51,14 +51,14 @@ const showCard = computed(() => {
 </template>
 <style>
 
-/* .close-icon {
-  width: 20px;
+.backbtn {
+  width: 80px;
   height: 20px;
   margin-right: 30px;
   margin-top: 20px;
   color: #333;
 }
-
+/* 
 .project-model {
   position: fixed;
   top: 0;

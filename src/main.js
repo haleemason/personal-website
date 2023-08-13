@@ -5,10 +5,9 @@ import { createPinia } from 'pinia'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
-/* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-/* import specific icons */
-import { faPaw } from '@fortawesome/free-solid-svg-icons'
+import { faPaw, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import App from './App.vue'
 import router from './router'
@@ -20,7 +19,7 @@ app.use(router)
 
 
 /* add icons to the library */
-library.add(faPaw)
+library.add(faPaw, faChevronLeft, faLinkedin, faGithub, faTwitter)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')

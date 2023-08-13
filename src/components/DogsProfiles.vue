@@ -118,50 +118,62 @@ function setFilter(filter) {
  </div>
 </template>
 <style>
+/* Common styles for portfolio items */
 .portfolio_item_dog {
     position: relative;
     overflow: hidden;
-    display: block;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     margin-bottom: 30px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3; /* Adjust the aspect ratio as needed */
 }
 
+/* Hover effect for portfolio items */
 .portfolio_item_dog .portfolio_item_dog_hover {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background-color: #425BB5;
-    -webkit-transform: translateY(100%);
     transform: translateY(100%);
-    opacity: 0;
-    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     color: #333;
+    opacity: 0;
 }
 
+.portfolio_item_dog:hover .portfolio_item_dog_hover {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hover effect content */
 .portfolio_item_dog .portfolio_item_dog_hover .item_info {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 10px;
     width: 100%;
     font-weight: bold;
 }
 
-.portfolio_item_dog .portfolio_item_dog_hover .item_info span {
+.portfolio_item_dog .portfolio_item_dog_hover .item_info span,
+.portfolio_item_dog .portfolio_item_dog_hover .item_info em {
     display: block;
     color: #fff;
     font-size: 18px;
-    -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
-    -webkit-transition: all .3s ease-in-out .3s;
     transition: all .3s ease-in-out .3s;
     opacity: 0;
+}
+
+.portfolio_item_dog:hover .item_info span,
+.portfolio_item_dog:hover .item_info em {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .portfolio_item_dog .portfolio_item_dog_hover .item_info em {
@@ -171,38 +183,22 @@ function setFilter(filter) {
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
-    -webkit-transition: all .3s ease-in-out .3s;
-    transition: all .3s ease-in-out .3s;
-    opacity: 0;
     font-size: 10px;
     letter-spacing: 2px;
 }
 
-.portfolio_item_dog:hover .portfolio_item_dog_hover {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-
-.portfolio_item_dog:hover .item_info em,
-.portfolio_item_dog:hover .item_info span {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-
+/* Styles for category grid */
 .portfolio .categories-grid .categories ul li {
     float: left;
 }
 
 .portfolio .categories-grid .categories ul li a {
     padding: 0 10px;
-    -webkit-transition: all .2s ease-in-out .2s;
     transition: all .2s ease-in-out .2s;
 }
 
+/* Additional styles */
 .portfolio_filter {
     padding-left: 0;
     display: inline-block;
@@ -210,9 +206,7 @@ function setFilter(filter) {
     text-align: center;
 }
 
-/* TODO: I have no idea how this is working  because it doesn't have _dog in it */
 .portfolio_item img {
-    -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
 
