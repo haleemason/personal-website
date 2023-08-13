@@ -52,34 +52,10 @@ const showCard = computed(() => {
 <style>
 
 .backbtn {
-  width: 80px;
-  height: 20px;
-  margin-right: 30px;
-  margin-top: 20px;
+  position: fixed;
+  top: 20px; /* Adjust the distance from the bottom as needed */
+  left: 20px; /* Adjust the distance from the left as needed */
   color: #333;
 }
-/* 
-.project-model {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: white;
-  z-index: 10000;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding-bottom: 20px;
-}
-
-.project {
-  cursor: pointer;
-}
-
-.project-model h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  line-height: 50px;
-} */
 
 </style>
