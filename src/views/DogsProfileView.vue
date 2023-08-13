@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import DogProfile from '../components/DogProfile.vue'
-
 const isLoading = ref(true)
 onMounted(() => {
  setTimeout(() => {
@@ -10,24 +9,40 @@ onMounted(() => {
 })
 </script>
 
+<!-- <script>
+import { VueInstagramEmbed } from 'vue-instagram-embed'
+// TODO: two export defaults?
+export default {
+ components: {
+  VueInstagramEmbed
+ }
+ // Rest of your component code
+}
+</script> -->
+
 <template>
  <DogProfile v-if="$route.params.dogName === 'samira'">
-  <template v-slot:modelTitle> Samira <br />Timeless Desert Rose TKA </template>
+  <template v-slot:modelTitle>Samira <br />Timeless Desert Rose TKA </template>
   <template v-slot:modelDate>
-   <p><b>Born:</b> September 18th, 2023<br /></p>
+   <p><b>Date of Birth:</b> September 18th, 2023<br /></p>
   </template>
   <template v-slot:modelContent>
-   <p>Sami Intro text here</p>
+   <p>Samira, or "Sami" for short, is just getting started!</p>
    <li><b>April 2nd, 2023:</b> S.T.A.R. Puppy Award</li>
-   <!-- <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CqjG4YFvhDf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CqjG4YFvhDf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CqjG4YFvhDf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Halee Mason (@haleemason)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script> -->
-
+   <span>
+    <!-- Use the Vue Instagram Embed component -->
+    <vue-instagram-embed
+     class="instagram-media"
+     link="https://www.instagram.com/p/CtnE-RAOAVe/?img_index=5"
+    />
+   </span>
    <li><b>June 11th, 2023:</b> AKC Novice Trick Dog Title</li>
    <li><b>June 11th, 2023:</b> AKC Intermediate Trick Dog Title</li>
    <li><b>June 11th, 2023:</b> AKC Advanced Trick Dog Title</li>
    <li>Currently training for CGC and Agility!</li>
    <br />
-   <li>Sire: Brody</li>
-   <li>Dam: Trouble</li>
+   <li><b>Sire:</b> Brody</li>
+   <li><b>Dam:</b> Trouble</li>
    <br />
    <br />
    <h4><a href="https://www.timelessaussies.com/">Timeless Desert Rose TKA</a></h4>
@@ -37,74 +52,116 @@ onMounted(() => {
  </DogProfile>
 
  <DogProfile v-if="$route.params.dogName === 'cammi'">
-  <template v-slot:modelTitle> Cammi<br />MACH Snowbelts Charming Invitation MXB MJS </template>
-  <template v-slot:modelDate> September 2005 - October 2021<br /> </template>
+  <template v-slot:modelTitle>Cammi<br />MACH Snowbelts Charming Invitation MXB MJS OF</template>
+  <template v-slot:modelDate><b>Date of Birth:</b> September 2005 - October 2021<br /> </template>
   <template v-slot:modelContent>
-   High level intro info for Cammi
+   <b>November 2nd, 2008:</b> MACH
    <br />
-   <li>
-    Cammi, Snowbelts Charming Invitation, is almost three years old now and is quickly becoming the
-    champion in the family. She competes in EXC B Standard in Agility almost every weekend and we
-    will be going to AKC Agility Nationals this year in North Carolina. She achieved her MACH on
-    November 2nd, 2008 at the Clarion Canine Obedience Club. She currently stands with 20 double Q's
-    and over 900 points. (The requirements for MACH are 20 double Q's and 750 points).
-   </li>
-   <li>
-    Cammi is definitely the leader of the pack. The other girls know that she is boss. She also
-    absolutely loves agility and always gets excited when she sees the jumps being set up. Her
-    favorite treats are bits of cheesesticks. She even learned to peel them after she mastered
-    opening her Christmas presents.
-   </li>
-   <li>
-    Cammi's parents are Briarbrook's Justin Case, "Justin" and Snowbelt's Engraved Invitation,
-    "DeeDee". Cammi has strong working drive for an Aussie and she is always eager to please.
-   </li>
+   <p>
+    Cammi, also known as Snowbelts Charming Invitation, graced our lives for an impressive 16 years, leaving behind a legacy that continues to shine. Her journey was marked by remarkable achievements, positioning her as a true champion within our family. An avid competitor, Cammi & Halee dedicated their weekends to the pursuit of excellence in the world of Agility, competing in the highest categories. As a testament to her prowess, Cammi & Halee were invited to participation in the prestigious 2008 AKC Agility Nationals in Concord, North Carolina.
+    <br /><br />
+    On November 2nd, 2008, at the Clarion Canine Obedience Club Agiliy trial, Cammi attained the
+    coveted MACH title, marking a milestone of exceptional accomplishment. Her journey to this
+    achievement was paved with dedication, evident in her collection of 20 double Q's and an
+    impressive tally of over 900 points. These accomplishments allowed Cammi to earn the MACH title,
+    which requires both 20 double Q's and 750 points.
+    <br /><br />
+    Cammi's role as the leader of the pack was undeniable, a role acknowledged and respected by her
+    fellow companions, Savannah & Vee. Cammi possessed an unbridled enthusiasm for the world of
+    agility, consistently exuberant to be competeing each week.
+    <br /><br />
+    Bearing the distinguished Snowbelt Aussie lineage of Briarbrook's Justin Case, affectionately
+    known as "Justin" and Snowbelt's Engraved Invitation, fondly referred to as "DeeDee" Cammi
+    inherits their admirable traits. Her strong work ethic, a characteristic synonymous with her
+    breed, the Australian Shepherd, is evident in her enthusiasm to engage and her persistent desire
+    to please.
+    <br /><br />
+    Cammi's legacy serves as a testament to her exceptional journey, embodying the spirit of
+    dedication, intelligence, and companionship that she shared with all fortunate enough to know
+    her.
+   </p>
+   <li><b>Sire:</b> Briarbrook's Justin Case</li>
+   <li><b>Dam:</b> Snowbelt's Engraved Invitation</li>
+
+   <br />
+   <h4>
+    <a href="http://www.snowbeltaussies.com/">MACH Snowbelts Charming Invitation MXB MJS OF</a>
+   </h4>
+   <br />
+   <img src="../assets/img/dogs/cammi_collage.jpg" class="img-responsive" />
    <br />
    <img src="../assets/img/dogs/cammi_tunnel.jpg" class="img-responsive" />
    <br />
+   <img src="../assets/img/dogs/cammi_best_junior.jpg" class="img-responsive" />
    <br />
-   <h4>
-    <a href="http://www.snowbeltaussies.com/">MACH Snowbelts Charming Invitation MXB MJS</a>
-   </h4>
+   <img src="../assets/img/dogs/cammi_ix.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_startline.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_ringside.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_face.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_stack.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_pout.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_gotcha.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_puppy.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_teen.jpg" class="img-responsive" />
+   <br />
+   <img src="../assets/img/dogs/cammi_pals.jpg" class="img-responsive" />
+   <br />
   </template>
  </DogProfile>
 
  <DogProfile v-if="$route.params.dogName === 'savannah'">
-  <template v-slot:modelTitle> Savannah <br />Snowbelts Engraved Invitation AX AXJ </template>
-  <template v-slot:modelDate> December 2006 - July 2023 </template>
+  <template v-slot:modelTitle>Savannah <br />Snowbelts Engraved Invitation AX AXJ NF</template>
+  <template v-slot:modelDate><b>Date of Birth:</b> December 2006 - July 2023 </template>
   <template v-slot:modelContent>
    <ul>
-    <li>
+    <p>
      Savannah was eager to please and showed a lot of promise! Unfortunately her competing career
      was cut short when I went off to college.
-    </li>
-    <li>Sire: ROMXI CH Briarbrook Sharp Dressed Man</li>
-    <li>Dam: CH Snowbelts Engraved Invitation</li>
+    </p>
+    <br />
+    <li><b>Sire:</b> ROMXI CH Briarbrook Sharp Dressed Man</li>
+    <li><b>Dam:</b> CH Snowbelts Engraved Invitation</li>
    </ul>
-   <h4><a href="http://www.snowbeltaussies.com/">Snowbelts Engraved Invitation AX AXJ</a></h4>
+   <h4>
+    <a href="http://www.snowbeltaussies.com/SB-Agility_Dogs.htm"
+     >Snowbelts Engraved Invitation AX AXJ NF</a
+    >
+   </h4>
+   <img src="../assets/img/dogs/savannah_tunnel.jpg" class="img-responsive" />
+
   </template>
  </DogProfile>
 
  <DogProfile v-if="$route.params.dogName === 'vee'">
-  <template v-slot:modelTitle>
-   Vee<br />
+  <template v-slot:modelTitle
+   >Vee<br />
    Snowbelts Charmed Life AX AXJ
   </template>
-  <template v-slot:modelDate>December 2008 - May 2020 </template>
+  <template v-slot:modelDate><b>Date of Birth:</b> December 2008 - May 2020 </template>
   <template v-slot:modelContent>
    <ul>
     <li>
      Vee was content running alongside her handler and wasn't the fastest, but tried her hardest.
     </li>
-    <li>Sire: ROMXI CH Briarbrook Sharp Dressed Man</li>
-    <li>Dam: CH Sunnyrains The Charmed One</li>
+    <br />
+    <li><b>Sire:</b> ROMXI CH Briarbrook Sharp Dressed Man</li>
+    <li><b>>Dam:</b> CH Sunnyrains The Charmed One</li>
    </ul>
+   <img src="../assets/img/dogs/vee_jump.jpg" class="img-responsive" />
    <h4><a href="http://www.snowbeltaussies.com/">Snowbelts Charmed Life AX AXJ</a></h4>
    <div><br /><br /></div>
   </template>
-</DogProfile>
+ </DogProfile>
 
-<DogProfile v-if="$route.params.dogName === 'meggie'">
+ <DogProfile v-if="$route.params.dogName === 'meggie'">
   <template v-slot:modelTitle>Meggie </template>
   <template v-slot:modelDate>September 1998 - Feburary 17th, 2006 </template>
   <template v-slot:modelContent>
@@ -121,7 +178,6 @@ onMounted(() => {
    <img src="../assets/img/portfolio/03.jpg" class="img-responsive" />
    <br />
    <br />
-   </template>
-</DogProfile>
-
+  </template>
+ </DogProfile>
 </template>

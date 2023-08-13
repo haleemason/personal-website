@@ -5,7 +5,6 @@ const route = useRoute()
 const isDogsPage = computed(()=> {
   return route.name === "dogs"
 })
-
 </script>
 <template>
  <header class="navbar-fixed-top">
