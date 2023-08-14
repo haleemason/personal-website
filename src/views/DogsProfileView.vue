@@ -81,31 +81,31 @@ onMounted(() => {
     <a href="http://www.snowbeltaussies.com/">MACH Snowbelts Charming Invitation MXB MJS OF</a>
    </h4>
    <br />
-   <img src="../assets/img/dogs/cammi_collage.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_collage.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_tunnel.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_tunnel.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_best_junior.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_best_junior.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_ix.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_ix.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_startline.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_startline.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_ringside.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_ringside.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_face.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_face.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_stack.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_stack.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_pout.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_pout.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_gotcha.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_gotcha.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_puppy.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_puppy.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_teen.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_teen.jpg" class="img-responsive" />
    <br />
-   <img src="../assets/img/dogs/cammi_pals.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/cammi/cammi_pals.jpg" class="img-responsive" />
    <br />
   </template>
  </DogProfile>
@@ -148,7 +148,7 @@ onMounted(() => {
     <li><b>Sire:</b> ROMXI CH Briarbrook Sharp Dressed Man</li>
     <li><b>>Dam:</b> CH Sunnyrains The Charmed One</li>
    </ul>
-   <img src="../assets/img/dogs/vee_jump.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/vee/vee_jump.jpg" class="img-responsive" />
    <h4><a href="http://www.snowbeltaussies.com/">Snowbelts Charmed Life AX AXJ</a></h4>
    <div><br /><br /></div>
   </template>
@@ -159,16 +159,11 @@ onMounted(() => {
   <template v-slot:modelDate>September 1998 - Feburary 17th, 2006 </template>
   <template v-slot:modelContent>
    <p>
-    Built a
-    <a href="https://github.com/haleemason/stroke-readmission-model"
-     ><b>predictive model using Python and TensorFlow</b></a
-    >
-    that was optimized to forecast the risk of rehospitalization in the year following stroke.
-    Collaborated with client and focused on model explainability by using techniques such as LIME.
+    Meggie text goes here
    </p>
    <br />
    <br />
-   <img src="../assets/img/portfolio/03.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/meggie/meggie_face.jpg" class="img-responsive" />
    <br />
    <br />
   </template>

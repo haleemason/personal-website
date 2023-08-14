@@ -1,9 +1,9 @@
 <script setup>
-import samiraPic from '../assets/img/dogs/sami_jump_8months_old.jpg'
-import cammiPic from '../assets/img/dogs/cammi_face.jpg'
-import savannahPic from '../assets/img/dogs/savannah_face.jpg'
-import veePic from '../assets/img/dogs/vee_face.jpg'
-import meggiePic from '../assets/img/dogs/meggie_face.jpg'
+import samiraPic from '../assets/img/dogs/samira/sami_jump_8months_old.jpg'
+import cammiPic from '../assets/img/dogs/cammi/cammi_face.jpg'
+import savannahPic from '../assets/img/dogs/savannah/savannah_face.jpg'
+import veePic from '../assets/img/dogs/vee/vee_face.jpg'
+import meggiePic from '../assets/img/dogs/meggie/meggie_face.jpg'
 import { ref } from 'vue'
 const filters = [
  {
