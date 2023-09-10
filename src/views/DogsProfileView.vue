@@ -128,7 +128,7 @@ onMounted(() => {
      >Snowbelts Engraved Invitation AX AXJ NF</a
     >
    </h4>
-   <img src="../assets/img/dogs/savannah_tunnel.jpg" class="img-responsive" />
+   <img src="../assets/img/dogs/savannah/savannah_tunnel.jpg" class="img-responsive" />
 
   </template>
  </DogProfile>

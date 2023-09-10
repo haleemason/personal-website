@@ -50,7 +50,7 @@
         id="profile-img"
       />
       <img
-        src="../assets/img/dogs/cammi_best_junior.jpg"
+        src="../assets/img/dogs/cammi/cammi_best_junior.jpg"
         width="800"
         class="img-responsive imageThree"
         alt=""
