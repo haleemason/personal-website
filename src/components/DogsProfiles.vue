@@ -25,42 +25,52 @@ const filters = [
 ]
 
 const profiles = [
- {
-  title: 'Samira<br/> Timeless Desert Rose TKA',
-  lead: 'Miniature American Shepherd',
-  src: samiraPic,
-  to: { name: 'dogProfile', params: { dogName: 'samira' } }
- },
- {
-  title: 'Cammi<br/> MACH Snowbelts Charming Invitation MXB MJS OF',
-  lead: 'Austrlian Shepherd',
-  src: cammiPic,
-  to: { name: 'dogProfile', params: { dogName: 'cammi' } }
- },
- {
-  title: 'Savannah<br/> Snowbelts Engraved Invitation AX AXJ NF',
-  lead: 'Austrlian Shepherd',
-  src: savannahPic,
-  to: { name: 'dogProfile', params: { dogName: 'savannah' } }
- },
- {
-  title: 'Vee<br/> Snowbelts Charmed Life AX AXJ',
-  lead: 'Austrlian Shepherd',
-  src: veePic,
-  to: { name: 'dogProfile', params: { dogName: 'vee' } }
- },
- {
-  title: 'Meggie <br/>',
-  lead: 'Golden Retriever',
-  src: meggiePic,
-  to: { name: 'dogProfile', params: { dogName: 'meggie' } }
- }
+    {
+        title: 'Samira<br/> Timeless Desert Rose TKA',
+        lead: 'Miniature American Shepherd',
+        src: samiraPic,
+        to: { name: 'dogProfile', params: { dogName: 'samira' } },
+        type: "mas",
+    },
+    {
+        title: 'Cammi<br/> MACH Snowbelts Charming Invitation MXB MJS OF',
+        lead: 'Austrlian Shepherd',
+        src: cammiPic,
+        to: { name: 'dogProfile', params: { dogName: 'cammi' } },
+        type: "aussie",
+    },
+    {
+        title: 'Savannah<br/> Snowbelts Engraved Invitation AX AXJ NF',
+        lead: 'Austrlian Shepherd',
+        src: savannahPic,
+        to: { name: 'dogProfile', params: { dogName: 'savannah' } },
+        type: "aussie",
+    },
+    {
+        title: 'Vee<br/> Snowbelts Charmed Life AX AXJ',
+        lead: 'Austrlian Shepherd',
+        src: veePic,
+        to: { name: 'dogProfile', params: { dogName: 'vee' } },
+        type: "aussie",
+    },
+    {
+        title: 'Meggie <br/>',
+        lead: 'Golden Retriever',
+        src: meggiePic,
+        to: { name: 'dogProfile', params: { dogName: 'meggie' } },
+        type: "golden",
+    }
 ]
 const selectedFilter = ref(filters[0])
 
 function setFilter(filter) {
  selectedFilter.value = filter
 }
+
+function showCard(type) {
+    return selectedFilter.value.type === type || selectedFilter.value.type === "*"
+}
+
 </script>
 <template>
  <div class="section" id="highlights">
@@ -94,7 +104,7 @@ function setFilter(filter) {
         class="right-half-card"
         @click="() => $router.push(profile.to)"
        >
-        <div class="col-md-4 col-sm-6 project">
+        <div v-show="showCard(profile.type)" class="col-md-4 col-sm-6 project">
          <a class="portfolio_item_dog"> 
           <!-- portfolio_item_dog_dog -->
           <img :src="profile.src" alt="image" class="img-responsive" />
@@ -117,8 +127,8 @@ function setFilter(filter) {
   </div>
  </div>
 </template>
-<style>
-/* Common styles for portfolio items */
+<style scoped>
+/* Common styles for portfolio Meet The Girls items */
 .portfolio_item_dog {
     position: relative;
     overflow: hidden;
@@ -183,7 +193,7 @@ function setFilter(filter) {
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
-    transform: translateY(100px);
+    transform: translateY(10px);
     font-size: 10px;
     letter-spacing: 2px;
 }
